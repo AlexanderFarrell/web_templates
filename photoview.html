@@ -1,20 +1,135 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
+    body {
+        margin: 0;
+    }
+    .PhotoColumns {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5%;
+        background: tan;
+        align-items: start;
+    }
+    .PhotoCol {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    .PhotoPicture {
+        background: white;
+        display: grid;
+        grid-template-rows: auto auto;
+        box-sizing: border-box;
+        padding: 5px;
+        cursor: pointer;
+        transform: scale(0.96);
+        transition: 0.2s transform;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+    }
+    .PhotoPicture:hover {
+
+        transform: scale(0.98) rotate(2deg);
+    }
+    a {
+        text-decoration: none;
+    }
+    .Caption {
+    }
+    .PhotoPicture > img {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .PhotoCaption {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 10px;
+        text-align: center;
+        place-items: center;
+    }
+    .PhotoCaption > div:nth-child(1) {
+        font-family: cursive;
+        color: #2c2c2c;
+        font-size: 0;
+    }
+    .PhotoCaption > div:nth-child(2) {
+        color: #836f55;
+        font-family: 'The Nautigal', cursive;
+        font-size: 20px;
+    }
+    .PhotoCaption > div:nth-child(3) {
+        font-family: cursive;
+        font-family: 'Waterfall', cursive;
+        font-size: 20px;
+        color: #836f55;
+    }
+    img {
+        object-fit: contain;
+    }
+    .PhotoNumber {
+        user-select: none;
+        position: absolute;
+        z-index: 600;
+        color: #ad8f60;
+
+        transform: translateY(-15px) translateX(-10px);
+        font-size: 30px;
+    }
+</style>
+<body>
 <div class="PhotoColumns">
-    <div>
-        <div class="PhotoPicture">
-            <img src="">
-            <p></p>
-        </div>
-        <div class="PhotoPicture">
-            <img src="">
-            <p></p>
+    <div class="PhotoCol">
+        <a href="https://www.google.com">
+            <div class="PhotoPicture">
+                <div class="PhotoNumber">
+                    01
+                </div>
+                <img src="https://i.etsystatic.com/15568096/r/il/e1ced4/2010945485/il_794xN.2010945485_a6x4.jpg">
+                <div class="PhotoCaption">
+                    <div>Something</div>
+                    <div>Weddings</div>
+                    <div>$500</div>
+                </div>
+            </div>
+        </a>
+        <div style="transform: scale(80%)">
+            <a href="https://www.google.com">
+                <div class="PhotoPicture">
+                    <div class="PhotoNumber">
+                        03
+                    </div>
+                    <img src="https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png">
+                    <div class="PhotoCaption">
+                        <div>Something</div>
+                        <div>Couples</div>
+                        <div>$500</div>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
-    <div>
-        <h1>Something</h1>
-        <div class="PhotoPicture">
-            <img src="">
-            <p></p>
+    <div class="PhotoCol" style="grid-template-rows: auto auto auto">
+        <div>Something</div>
+        <div style="transform: scale(90%)">
+            <a href="https://www.google.com">
+                <div class="PhotoPicture">
+                    <div class="PhotoNumber">
+                        02
+                    </div>
+                    <img src="https://i.etsystatic.com/15568096/r/il/e1ced4/2010945485/il_794xN.2010945485_a6x4.jpg">
+                    <div class="PhotoCaption">
+                        <div>Something</div>
+                        <div>Barmisvas</div>
+                        <div>$500</div>
+                    </div>
+                </div>
+            </a>
+
         </div>
-        <p class="Caption">Some Other Text</p>
+
+        <div class="Caption">Some Other Text</div>
     </div>
 </div>
+</body>
